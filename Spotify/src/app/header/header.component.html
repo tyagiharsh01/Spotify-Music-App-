@@ -1,0 +1,30 @@
+<mat-toolbar>
+    <div id="header">
+        <h2>Spotify</h2>
+    
+        <div id="icons">
+            <mat-icon>home</mat-icon>
+            <mat-icon  class="register-icon" routerLink="/registration">person_add</mat-icon>
+            <mat-icon routerLink="/login" >login</mat-icon>
+            <mat-icon (click)="logout()">logout</mat-icon> 
+        
+        </div>
+    </div>
+    </mat-toolbar>
+    <div id = "sidenav">
+        <br>
+        <h2 id ="name">Hi,{{name1}}</h2> 
+    <br>
+   <button mat-raised-button (click)="submit()" type="submit">createPlayList</button>
+   <br>
+   <br>
+   <button mat-raised-button  (click)="deleteSong()"type="submit">deletePlayList</button>
+   <br>
+   <br>
+   <button mat-raised-button (click)="showAllPlayList()" type="submit">AllPlayList</button>
+   <br>
+   <br>
+   <button mat-raised-button (click)="showAllSong()" type="submit">ShowAllSong</button>
+    </div>
+    
+

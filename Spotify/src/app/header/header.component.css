@@ -1,0 +1,41 @@
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 80vw;
+    
+}
+#icons {
+    position: absolute;
+    right: 10px;
+}
+#icons > * {
+    margin-right: 15px;
+}
+#sidenav{
+    position: fixed;
+    left: 0;
+    top: 63px;
+    height: 100%;
+    width: 243px;
+    background-color:rgb(65, 196, 65);
+}
+mat-toolbar{
+    position:fixed;
+background-color: rgb(65, 196, 65);
+}
+button{
+    margin-left: 30px;
+    text-align: center;
+    background-color: black;
+}
+.mat-icon:hover {
+    cursor: pointer;
+  }
+  #name {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-style:initial;
+    color: whitesmoke;
+    text-align: center;
+  }

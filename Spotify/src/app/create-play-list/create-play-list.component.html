@@ -1,0 +1,38 @@
+
+<div>
+<form [formGroup]="playlistForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Playlist Name:</mat-label>
+      <input matInput type="text" formControlName="playListName" required>
+      <mat-error *ngIf="playListName?.errors?.['required']">
+        Playlist name is required.
+      </mat-error>
+    </mat-form-field>
+  <div formArrayName="songs">
+    <div formGroupName=0>
+    <mat-form-field>
+      <mat-label>Song Title:</mat-label>
+      <input matInput type="text" formControlName="title" required>
+      <mat-error *ngIf="title?.errors?.['required']">
+        Song title is required.
+      </mat-error>
+    </mat-form-field>
+  <br>
+    <mat-form-field>
+      <mat-label>Song Artist:</mat-label>
+      <input matInput type="text" formControlName="artist" required>
+      <mat-error *ngIf="artist?.errors?.['required']">
+        Song artist is required.
+      </mat-error>
+    </mat-form-field>
+</div>
+</div>
+<button mat-raised-button color="primary" type="submit" [disabled]="!playlistForm.valid">Save</button> 
+    <div id="cont1">
+      <app-show-play-list></app-show-play-list>
+    </div>
+  </form>
+</div>
+
+
+  

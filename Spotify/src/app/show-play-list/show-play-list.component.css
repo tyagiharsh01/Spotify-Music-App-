@@ -1,0 +1,12 @@
+ h3 {
+    /* color:white; */
+    text-align: center;
+    padding-top: 5%;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6%;
+  }

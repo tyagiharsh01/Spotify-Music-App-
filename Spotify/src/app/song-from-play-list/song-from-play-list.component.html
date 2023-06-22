@@ -1,0 +1,23 @@
+<form [formGroup]="songForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Playlist Name:</mat-label>
+      <input matInput type="text" formControlName="playListName" required>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!songForm.valid">showsongs</button>
+    <div id="cont1">
+      <app-show-play-list></app-show-play-list>
+    </div>
+  </form>
+<div id = "cont1">
+    <div class="songDetails"  *ngFor="let song of song">
+        <img src="../../assets/Spotify.jpeg" alt="" height="120px">  
+            <h3>{{song.title}}</h3>
+            <p>{{song.artist}}</p> 
+            <button class="b" mat-icon-button  (click)="songPlay()">
+                <mat-icon color="primary"  >play_arrow</mat-icon>
+                </button>       
+    </div>
+    
+    </div>
+    

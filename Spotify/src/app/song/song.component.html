@@ -1,0 +1,15 @@
+<div id = "cont1">
+<div class="songDetails" *ngFor="let song of songData">
+    <img src="../../assets/Spotify.jpeg" alt="" height="120px">  
+        <h3>{{song.title}}</h3>
+        <p>{{song.artist}}</p> 
+        <button mat-icon-button   [disabled]="isDisabled" (click)="songPlay()">
+            <mat-icon >play_arrow</mat-icon>
+          </button>
+        <button mat-icon-button (click)="addSong(song)">
+          <mat-icon >add_circle</mat-icon> 
+        </button>    
+     
+</div>
+
+</div>
